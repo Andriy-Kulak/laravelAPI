@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\CreateVehicleRequest;
 use App\Http\Controllers\Controller;
 use App\Maker;
 use App\Vehicle;
@@ -33,9 +34,21 @@ class MakerVehiclesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateVehicleRequest $request, $makerId)
     {
-        //
+
+        $maker = Maker::find($makerId);
+
+        //if maker id is not found, error is displayed
+        if(!$maker){
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+
+        $values = $request->all();
+
+        $maker->vehicles()->create($values);
+
+        return response()->json(['message' => 'The vehicle is created'], 201);
     }
 
     public function show($id, $vehicleId)
