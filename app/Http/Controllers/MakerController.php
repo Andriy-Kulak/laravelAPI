@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use App\Maker;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,8 @@ class MakerController extends Controller
      */
     public function index()
     {
-        return 'Whats popping';
+        $makers = Maker::all();
+        return response()->json(['data' => $makers], 200);
     }
 
 
@@ -39,7 +41,13 @@ class MakerController extends Controller
      */
     public function show($id)
     {
-        //
+        $maker = Maker::find($id);
+
+        if(!$maker){
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+
+        return response()->json(['data' => $maker], 200);
     }
 
     /**
