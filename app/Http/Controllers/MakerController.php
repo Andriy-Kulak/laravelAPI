@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Maker;
 use App\Http\Requests;
+use App\Http\Requests\CreateMakerRequest;
 use App\Http\Controllers\Controller;
 
 class MakerController extends Controller
@@ -28,9 +29,15 @@ class MakerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateMakerRequest $request)
     {
-        //
+        $values = $request->only('name', 'phone');
+
+        Maker::create($values);
+
+        return response()->json(['message' => 'Maker correctly added'], 201);
+
+
     }
 
     /**
@@ -43,6 +50,7 @@ class MakerController extends Controller
     {
         $maker = Maker::find($id);
 
+        //if maker id is not found, error is displayed
         if(!$maker){
             return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
         }

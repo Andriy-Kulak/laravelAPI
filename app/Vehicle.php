@@ -20,7 +20,8 @@ class Vehicle extends Model {
     protected $hidden = [
         'serie',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'maker_id'
     ];
 
     public function maker() {

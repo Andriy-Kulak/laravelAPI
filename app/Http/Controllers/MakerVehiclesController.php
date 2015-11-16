@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Maker;
+use App\Vehicle;
 class MakerVehiclesController extends Controller
 {
     /**
@@ -14,9 +15,16 @@ class MakerVehiclesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id )
+    public function index($id)
     {
-        return "Showing the vehicles of $id";
+        $maker = Maker::find($id);
+
+        //if maker id is not found, error is displayed
+        if(!$maker){
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+
+        return response()->json(['data' => $maker->vehicles], 200);
     }
 
     /**
@@ -28,6 +36,24 @@ class MakerVehiclesController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function show($id, $vehicleId)
+    {
+        $maker = Maker::find($id);
+
+        //if maker id is not found, error is displayed
+        if(!$maker){
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+
+        $vehicle = $maker->vehicles->find($vehicleId);
+
+        if(!$vehicle){
+            return response()->json(['message' => 'This vehicle does not exist for this maker', 'code' => 404], 404);
+        }
+
+        return response()->json(['data' => $maker->vehicles->find($vehicleId)], 200);
     }
 
     /**
