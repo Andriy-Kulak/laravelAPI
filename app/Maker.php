@@ -14,7 +14,6 @@ class Maker extends Model {
     ];
 
     protected $hidden = [
-        'id',
         'updated_at',
         'created_at'
     ];
