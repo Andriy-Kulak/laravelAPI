@@ -13,7 +13,7 @@ class VehiclesTable extends Migration
     public function up()
     {
         Schema::create('vehicles', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('serie');
             $table->string('color');
             $table->integer('power');
             $table->float('capacity');
