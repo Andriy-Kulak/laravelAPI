@@ -14,6 +14,10 @@ use App\Http\Controllers\Controller;
 
 class MakerController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth.basis.once', ['except' => ['index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
