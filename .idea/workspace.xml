@@ -116,14 +116,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakerVehiclesController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MakerVehiclesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerVehiclesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40816328">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Handler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5102041">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#34#48#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotFoundHttpException.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Exception/NotFoundHttpException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="11" column="49" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,6 +215,7 @@
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MakerController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MakerVehiclesController.php" />
+        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
       </list>
     </option>
   </component>
@@ -374,7 +397,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="ONCE&#9;null&#9;null&#10;authbas&#9;null&#9;null&#10;user&#9;null&#9;null&#10;FormRe&#9;null&#9;null&#10;Create&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/Andriy3x1000/Sites/Larapi/app/Http/routes.php&#10;model.php&#9;FILE&#9;file:///Users/Andriy3x1000/Sites/Larapi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
+    <property name="SearchEverywhereHistoryKey" value="notfoun&#9;null&#9;null&#10;handler&#9;null&#9;null&#10;ONCE&#9;null&#9;null&#10;authbas&#9;null&#9;null&#10;user&#9;null&#9;null&#10;FormRe&#9;null&#9;null&#10;Create&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/Andriy3x1000/Sites/Larapi/app/Http/routes.php&#10;model.php&#9;FILE&#9;file:///Users/Andriy3x1000/Sites/Larapi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -630,12 +653,12 @@
       <option name="number" value="Default" />
       <updated>1447528864508</updated>
       <workItem from="1447528866877" duration="17595000" />
-      <workItem from="1447903522113" duration="4542000" />
+      <workItem from="1447903522113" duration="5750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22137000" />
+    <option name="totallyTimeSpent" value="23345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1038,10 +1061,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerVehiclesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40816328">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Exception/NotFoundHttpException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5102041">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
