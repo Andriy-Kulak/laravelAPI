@@ -27,7 +27,7 @@ class OnceAuth implements  Middleware
     }
 
     /**
-     * Handle an incoming request.
+     * Making sure user is properly authorized.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

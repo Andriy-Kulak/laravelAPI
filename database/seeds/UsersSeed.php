@@ -7,7 +7,7 @@ use App\User;
 class UsersSeed extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for User.
      *
      * @return void
      */

@@ -10,7 +10,7 @@ use App\Vehicle;
 class VehicleController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all vehicles data
      *
      * @return \Illuminate\Http\Response
      */

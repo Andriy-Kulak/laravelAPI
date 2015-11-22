@@ -16,9 +16,9 @@ class MakerVehiclesController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * Shows all vehicles related to particular car maker
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index($id)
     {
@@ -33,10 +33,10 @@ class MakerVehiclesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Store vehicles related to particular car maker
+     * @param CreateVehicleRequest $request
+     * @param $makerId
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(CreateVehicleRequest $request, $makerId)
     {
@@ -49,12 +49,17 @@ class MakerVehiclesController extends Controller
         }
 
         $values = $request->all();
-
         $maker->vehicles()->create($values);
 
-        return response()->json(['message' => 'The vehicle is created with id'], 201);
+        return response()->json(['message' => 'The vehicle is created.'], 201);
     }
 
+    /**
+     * Show specific vehicles related to particular car maker
+     * @param $id
+     * @param $vehicleId
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function show($id, $vehicleId)
     {
         $maker = Maker::find($id);
@@ -74,11 +79,11 @@ class MakerVehiclesController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Update specific vehicles related to particular car maker
+     * @param CreateVehicleRequest $request
+     * @param $makerId
+     * @param $vehicleId
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(CreateVehicleRequest $request, $makerId, $vehicleId)
     {
@@ -109,11 +114,12 @@ class MakerVehiclesController extends Controller
 
         return response()->json(['message' => 'The maker has been updated'], 200);
     }
+
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Delete vehicles related to particular car maker.
+     * @param $makerId
+     * @param $vehicleId
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($makerId, $vehicleId)
     {

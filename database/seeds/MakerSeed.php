@@ -7,7 +7,7 @@ use Faker\Factory as Faker;
 class MakerSeed extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for Maker.
      *
      * @return void
      */

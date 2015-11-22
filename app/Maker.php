@@ -22,4 +22,10 @@ class Maker extends Model {
         return $this->hasMany('App\Vehicle');
     }
 
+    public function makerExistCheck($maker){
+        if(!$maker){
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+    }
+
 }

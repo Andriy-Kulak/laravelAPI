@@ -19,7 +19,7 @@ class MakerController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Display all car maker's data
      *
      * @return \Illuminate\Http\Response
      */
@@ -31,7 +31,7 @@ class MakerController extends Controller
 
 
     /**
-     * Store a newly created resource in storage.
+     * Storing car maker's today
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -48,7 +48,7 @@ class MakerController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display specific maker's data.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -107,9 +107,7 @@ class MakerController extends Controller
         $maker = Maker::find($id);
 
         //if maker id is not found, error is displayed
-        if(!$maker){
-            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
-        }
+        $maker->makerExistCheck($maker);
 
         $vehicles = $maker->vehicles;
 
