@@ -52,7 +52,7 @@ class MakerVehiclesController extends Controller
 
         $maker->vehicles()->create($values);
 
-        return response()->json(['message' => 'The vehicle is created'], 201);
+        return response()->json(['message' => 'The vehicle is created with id'], 201);
     }
 
     public function show($id, $vehicleId)
