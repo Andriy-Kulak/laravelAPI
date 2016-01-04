@@ -16,10 +16,7 @@ class OnceAuth implements  Middleware
     protected $auth;
 
     /**
-     * Create a new middleware instance.
-     *
-     * @param  \Illuminate\Contracts\Auth\Guard  $auth
-     * @return void
+     * @param Guard $auth
      */
     public function __construct(Guard $auth)
     {
